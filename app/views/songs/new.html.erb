@@ -1,0 +1,14 @@
+<h1>New song</h1>
+
+<%= select(:artist, :artist_id, options_for_select(@artists)) %>
+
+<%= form_for :song, url: songs_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
