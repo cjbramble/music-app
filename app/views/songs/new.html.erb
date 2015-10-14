@@ -2,7 +2,8 @@
 
 <%= form_for :song, url: songs_path do |f| %>
 
-  <%= select(:artist, :artist_id, options_from_collection_for_select(@artists, :id, :name)) %>
+
+  <%= f.select(:artist_id, options_from_collection_for_select(@artists, :id, :name)) %>
 
   <p>
     <%= f.label :title %><br>

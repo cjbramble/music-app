@@ -1,10 +1,11 @@
 class ArtistsController < ApplicationController
+
   def index
     @artists = Artist.all
   end
 
   def show
-    @artist = Artist.where(id: params[:id])
+    @artist = Artist.where(id: params[:id]).first
   end
 
   def new
