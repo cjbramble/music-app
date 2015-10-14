@@ -1,4 +1,7 @@
 <p>
   <strong>Artist:</strong>
   <%= @artist.name %>
+  <% @artist.songs.each do |song| %>
+  <%= song.title %>
+  <% end %>
 </p>
