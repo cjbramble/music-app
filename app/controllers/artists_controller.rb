@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def show
-    @artist = Artist.where(id: params[:id])
+    @artist = Artist.where(id: 1)
   end
 
   def new
