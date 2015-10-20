@@ -1,7 +1,12 @@
 <p>
-  <strong>Artist:</strong>
-  <%= @artist.name %>
-  <% @artist.songs.each do |song| %>
-  <%= song.title %>
-  <% end %>
+  <table>
+    <h2>
+      <strong><%= @artist.name %></strong>
+    </h2>
+    <% @artist.songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+    </tr>
+    <% end %>
+  </table>
 </p>
