@@ -33,6 +33,12 @@ class ArtistsController < ApplicationController
     redirect_to @artist
   end
 
+  # Destroy song
+  #
+  # @param name [Symbol] :string
+  # @param artist_id [Symbol] :integer
+  # @return [Redirect]
+  #
   def destroy
     @artist = Artist.find(params[:id])
     @artist.destroy
@@ -40,6 +46,8 @@ class ArtistsController < ApplicationController
     redirect_to artists_path
   end
 
+  # Provides database reference for creation of artist
+  #
   private
     def artist_params
       params.require(:artist).permit(:name, :artist_id)
