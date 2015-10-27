@@ -25,8 +25,7 @@ class SongsController < ApplicationController
   # Process and create new song
   #
   # @param title [Symbol] :string
-  # @param artist_id [Symbol] :integer
-  # @return [Redirect]
+  # @return [View]
   #
   def create
     @song = Song.new(song_params)

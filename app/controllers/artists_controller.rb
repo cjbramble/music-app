@@ -36,8 +36,7 @@ class ArtistsController < ApplicationController
   # Destroy song
   #
   # @param name [Symbol] :string
-  # @param artist_id [Symbol] :integer
-  # @return [Redirect]
+  # @return [View]
   #
   def destroy
     @artist = Artist.find(params[:id])
