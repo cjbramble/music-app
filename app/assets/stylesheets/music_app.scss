@@ -1,6 +1,5 @@
 .navbar {
-  background-color: darkcyan;
-  color: teal;
+  background-color: #000000;
 }
 
 .welcome-image {
@@ -11,4 +10,20 @@
 
 .front-page-images {
   width: 100%;
+}
+
+#navbar-font {
+  color: white;
+}
+
+#dropdown-background-color {
+  background-color: #000000;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #31728c;
 }
