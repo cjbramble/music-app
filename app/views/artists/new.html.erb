@@ -1,11 +1,26 @@
-<h1>New artist</h1>
-<%= form_for :artist, url: artists_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+<body>
+  <h1>New artist</h1>
+  <%= form_for :artist, url: artists_path do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+
+  <% if @artist.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(@artist.errors.count, "error") %>
+        prohibited this artist from being saved:</h2>
+
+      <ul>
+      <% @artist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</body>
