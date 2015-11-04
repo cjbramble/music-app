@@ -1,12 +1,12 @@
-<p>
-  <table>
-    <h2>
-      <strong><%= @artist.name %></strong>
-    </h2>
-    <% @artist.songs.each do |song| %>
-    <tr>
-      <td><%= song.title %></td>
-    </tr>
-    <% end %>
-  </table>
-</p>
+<table>
+  <tr>
+    <td>
+      <h2>
+        <strong><%= @artist.name %></strong>
+      </h2>
+    </td>
+    <tr><% @artist.songs.each do |song| %></tr>
+    <td><%= song.title %></td>
+  </tr>
+  <% end %>
+</table>

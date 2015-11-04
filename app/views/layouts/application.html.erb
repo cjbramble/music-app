@@ -7,38 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      </button>
-      <a id="navbar-font" class="navbar-brand" href="/">Music App</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" id="navbar-font" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artists <span class="caret"></span></a>
-          <ul id="dropdown-background-color" class="dropdown-menu">
-            <li><a href="/artists">Artists List</a></li>
-            <li><a href="/artists/new">Add Artist</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" id="navbar-font" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Songs <span class="caret"></span></a>
-          <ul id="dropdown-background-color" class="dropdown-menu">
-            <li><a href="/songs">Songs List</a></li>
-            <li><a href="/songs/new">Add Song</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container">
-    <%= yield %>
+  <div id="navbar-style" class="container-fluid gradient">
+    <nav class="row">
+      <div class="navbar-header col-md-8 col-md-offset-2">
+        <a id="navbar-font" class="navbar-brand" href="/"><%= image_tag "musicapp.png" %></a>
+      </div>
+      <div class="row btn-group" role="group" aria-label="...">
+        <a href="/artists" class="btn btn-default">Artists</a>
+        <a href="/songs" class="btn btn-default">Songs</a>
+      </div>
+    </nav>
   </div>
-
-  <footer class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  <footer>
   </footer>
 </body>
 </html>
