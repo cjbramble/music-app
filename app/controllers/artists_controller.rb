@@ -12,7 +12,7 @@ class ArtistsController < ApplicationController
   # @return [View]
   #
   def show
-    @artist = Artist.where(id: params[:id]).first
+    @artist = Artist.find(params[:id])
   end
 
   # New artist form

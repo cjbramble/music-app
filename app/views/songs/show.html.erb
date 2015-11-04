@@ -1,4 +1,10 @@
-<p>
-  <strong>Song:</strong>
-  <%= @song.title %>
-</p>
+<table>
+  <tr>
+    <td><strong>Song:</strong></td>
+    <td><%= @song.title %></td>
+  </tr>
+  <tr>
+    <td><strong>by:</strong></td>
+    <td><%= @song.artist.name %></td>
+  </tr>
+</table>
