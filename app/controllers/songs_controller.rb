@@ -33,6 +33,7 @@ class SongsController < ApplicationController
     if @song.save
       redirect_to @song
     else
+      @artists = Artist.all
       render 'new'
     end
   end
