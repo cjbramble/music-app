@@ -1,12 +1,12 @@
 <h1>Songs</h1>
-<%= link_to 'New Song', new_song_path %>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Song', new_song_path %></button>
 
 <table class="table table-striped">
   <% @songs.each do |song| %>
     <tr>
       <td><%= song.title %></td>
-      <td><%= link_to 'Details', song_path(song) %></td>
-      <td><%= link_to 'Delete', song_path(song),
+      <td id="push-right"><%= link_to 'Details', song_path(song) %></td>
+      <td id="push-right"><%= link_to 'Delete', song_path(song), class: "delete-red-text",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
