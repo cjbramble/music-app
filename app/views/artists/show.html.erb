@@ -1,12 +1,19 @@
+<h3>Artist: <%= @artist.name %></h3>
 <table>
-  <tr>
-    <td>
-      <h2>
-        <strong><%= @artist.name %></strong>
-      </h2>
-    </td>
-    <tr><% @artist.songs.each do |song| %></tr>
-    <td><%= song.title %></td>
-  </tr>
+  <p id="songs">Songs</p>
+  <% @artist.songs.each do |song| %>
+    <tr>
+      <td><%= song.title %></td>
+    </tr>
   <% end %>
 </table>
+<row>
+  <button id="delete-artist" type="button" class="btn btn-default artist-back-button">
+    <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
+  </button>
+  <button id="delete-artist" type="button" class="btn btn-danger">
+    <%= link_to 'Delete', artist_path, class: 'artist-buttons-text-color',
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+  </button>
+</row>
