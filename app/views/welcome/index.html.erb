@@ -5,19 +5,11 @@
 </div>
 
 <div class="row">
+  <% @artists.each do |artist| %>
   <div class="col-lg-4">
     <%= image_tag "shutterstock-left.jpg", class: "front-page-images" %>
-    <h2><%= @artists %></h2>
+    <h2><%= artist.name %></h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices mi eu quam fermentum molestie. Nullam ut lacus enim. Fusce nisl tortor, finibus eu lobortis in, euismod sit amet purus. Sed nec arcu nec nisl convallis interdum et sed lorem. Pellentesque in turpis vehicula, rhoncus turpis nec, posuere urna. In consectetur non nisl in sagittis. Praesent vitae luctus velit, sed luctus diam. Quisque quis augue sed ligula rhoncus elementum at non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non faucibus ex. Proin tempor vel purus a ultrices.</p>
   </div>
-  <div class="col-lg-4">
-    <%= image_tag "shutterstock-middle.jpg", class: "front-page-images" %>
-    <h2>Cracker</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices mi eu quam fermentum molestie. Nullam ut lacus enim. Fusce nisl tortor, finibus eu lobortis in, euismod sit amet purus. Sed nec arcu nec nisl convallis interdum et sed lorem. Pellentesque in turpis vehicula, rhoncus turpis nec, posuere urna. In consectetur non nisl in sagittis. Praesent vitae luctus velit, sed luctus diam. Quisque quis augue sed ligula rhoncus elementum at non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non faucibus ex. Proin tempor vel purus a ultrices.</p>
-  </div>
-  <div class="col-lg-4">
-    <%= image_tag "shutterstock-right.jpg", class: "front-page-images" %>
-    <h2>Phish</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices mi eu quam fermentum molestie. Nullam ut lacus enim. Fusce nisl tortor, finibus eu lobortis in, euismod sit amet purus. Sed nec arcu nec nisl convallis interdum et sed lorem. Pellentesque in turpis vehicula, rhoncus turpis nec, posuere urna. In consectetur non nisl in sagittis. Praesent vitae luctus velit, sed luctus diam. Quisque quis augue sed ligula rhoncus elementum at non ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed non faucibus ex. Proin tempor vel purus a ultrices.</p>
-  </div>
+  <% end %>
 </div>
