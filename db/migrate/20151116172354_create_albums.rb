@@ -1,6 +1,6 @@
-class CreateSongs < ActiveRecord::Migration
+class CreateAlbums < ActiveRecord::Migration
   def change
-    create_table :songs do |t|
+    create_table :albums do |t|
       t.string :title
 
       t.timestamps null: false
