@@ -1,0 +1,14 @@
+<body>
+  <h1>New album</h1>
+  <%= form_for :album, url: albums_path do |f| %>
+  <%= f.select(:artist_id, options_from_collection_for_select(@artists, :id, :name)) %>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</body>
