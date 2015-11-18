@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20151117204541) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.integer  "artist_id",  limit: 4
-    t.integer  "albums_id",  limit: 4
+    t.integer  "album_id",   limit: 4
   end
 
 end
