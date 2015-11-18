@@ -18,19 +18,20 @@ class AlbumsController < ApplicationController
     if @album.save
       redirect_to @album
     else
+      @artists = Artist.all
       render 'new'
     end
   end
 
   def destroy
     @album = Album.find(params[:id])
-    @artist.destroy
+    @album.destroy
 
     redirect_to albums_path
   end
 
   private
   def album_params
-    params.require(:artist).permit(:name, :artist_id)
+    params.require(:album).permit(:title, :album_id)
   end
 end
