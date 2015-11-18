@@ -1,0 +1,14 @@
+<h1>Albums</h1>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Album', new_album_path %></button>
+
+<table class="table table-striped">
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.title %></td>
+      <td id="push-right"><%= link_to 'Details', albums_path(album) %></td>
+      <td id="push-right"><%= link_to 'Destroy', album_path(artist), class: "delete-red-text",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
