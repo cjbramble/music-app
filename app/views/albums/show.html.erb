@@ -1,0 +1,17 @@
+<h3>Album: <%= @album.title %></h3>
+<table>
+  <tr>
+    <td><strong>by:</strong></td>
+    <td><%= @album.artist.name %></td>
+  </tr>
+</table>
+<row>
+  <button id="delete-artist" type="button" class="btn btn-default artist-back-button">
+    <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
+  </button>
+  <button id="delete-artist" type="button" class="btn btn-danger">
+    <%= link_to 'Delete', album_path, class: 'artist-buttons-text-color',
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %>
+  </button>
+</row>

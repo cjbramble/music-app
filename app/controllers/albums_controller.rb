@@ -6,6 +6,7 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
+    @artist = Artist.all
   end
 
   def new
@@ -15,6 +16,7 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
+
     if @album.save
       redirect_to @album
     else
@@ -32,6 +34,6 @@ class AlbumsController < ApplicationController
 
   private
   def album_params
-    params.require(:album).permit(:title, :album_id)
+    params.require(:album).permit(:title, :artist_id)
   end
 end
