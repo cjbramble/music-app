@@ -5,8 +5,8 @@
   <% @albums.each do |album| %>
     <tr>
       <td><%= album.title %></td>
-      <td id="push-right"><%= link_to 'Details', albums_path(album) %></td>
-      <td id="push-right"><%= link_to 'Destroy', album_path(artist), class: "delete-red-text",
+      <td id="push-right"><%= link_to 'Details', album_path(album) %></td>
+      <td id="push-right"><%= link_to 'Destroy', album_path(album), class: "delete-red-text",
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
