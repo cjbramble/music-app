@@ -6,7 +6,7 @@
 <table class="table table-striped">
   <% @artists.each do |artist| %>
     <tr>
-      <td><%= artist.name %></td>
+      <td><%= link_to artist.name, artist_path(artist) %></td>
       <td id="push-right"><%= link_to 'Details', artist_path(artist) %></td>
       <td id="push-right"><%= link_to 'Delete', artist_path(artist), class: "delete-red-text",
               method: :delete,
