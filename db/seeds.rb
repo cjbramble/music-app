@@ -1,6 +1,6 @@
 {
   'Ween' => {
-    'The Mollusk' => ["I'm Dancing In The Show Tonight", "The Mollusk", "Polka Dot Tail", "I'll Be Your Jonny On The Spot", "Mutilated Lips", "The Blarney Stone", "It's Gonna Be (Alright)", "The Golden Eel", "Cold Blows the Wind", "Pink Eye (On My Leg)", "Waving My Dick In The Wind", "Buckingham Green", "Ocean Man", "She Wanted to Leav / (Reprise)"],
+    'The Mollusk' => ["I'm Dancing In The Show Tonight", "The Mollusk", "Polka Dot Tail", "I'll Be Your Jonny On The Spot", "Mutilated Lips", "The Blarney Stone", "It's Gonna Be (Alright)", "The Golden Eel", "Cold Blows the Wind", "Pink Eye (On My Leg)", "Waving My **** In The Wind", "Buckingham Green", "Ocean Man", "She Wanted to Leav / (Reprise)"],
     'Chocolate and Cheese' => ["Take Me Away", "Spinal Meningitis (Got Me Down)", "Freedom of '76'", "I Can't Put My Finger on It", "A Tear for Eddie", "Roses Are Free", "Baby Bitch", "Mister, Would You Please Help My Pony?", "Drifter in the Dark", "Voodoo Lady", "Joppa Road", "Candi", "Buenas Tardes Amigo", "The HIV Song", "What Deaner Was Talkin' About", "Don't Shit Where You Eat"]
   },
   'Cracker' => {
