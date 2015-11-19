@@ -1,19 +1,28 @@
 <h3>Artist: <%= @artist.name %></h3>
-<table>
-  <p id="songs">Albums</p>
+<p>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Artist', new_artist_path %></button>
+</p>
+
+<h4>Albums:</h4>
+<p>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Album', new_album_path %></button>
+</p>
+
+<table class="table table-striped">
   <% @artist.albums.each do |album| %>
     <tr>
       <td><%= album.title %></td>
     </tr>
   <% end %>
 </table>
-<row>
-  <button id="delete-artist" type="button" class="btn btn-default artist-back-button">
-    <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
-  </button>
-  <button id="delete-artist" type="button" class="btn btn-danger">
-    <%= link_to 'Delete', artist_path, class: 'artist-buttons-text-color',
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
-  </button>
-</row>
+
+<p>
+<button id="delete-artist" type="button" class="btn btn-default artist-back-button">
+  <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
+</button>
+<button id="delete-artist" type="button" class="btn btn-danger">
+  <%= link_to 'Delete', artist_path, class: 'artist-buttons-text-color',
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+</button>
+</p>
