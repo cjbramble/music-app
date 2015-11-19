@@ -1,17 +1,25 @@
 <h3>Song: <%= @song.title %></h3>
-<table>
-  <tr>
-    <td><strong>by:</strong></td>
-    <td><%= @song.artist %></td>
-  </tr>
-</table>
-<row>
-  <button id="delete-artist" type="button" class="btn btn-default artist-back-button">
-    <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
-  </button>
-  <button id="delete-artist" type="button" class="btn btn-danger">
-    <%= link_to 'Delete', song_path, class: 'artist-buttons-text-color',
-            method: :delete,
-            data: { confirm: 'Are you sure?' } %>
-  </button>
-</row>
+<p>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Song', new_song_path %></button>
+</p>
+
+<h4>Album: <%= @song.album.title %></h4>
+<p>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Album', new_album_path %></button>
+</p>
+
+<h4>Artist: <%= @song.album.artist.name %></h4>
+<p>
+<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Artist', new_artist_path %></button>
+</p>
+
+<p>
+<button id="delete-artist" type="button" class="btn btn-default artist-back-button">
+  <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
+</button>
+<button id="delete-artist" type="button" class="btn btn-danger">
+  <%= link_to 'Delete', song_path, class: 'artist-buttons-text-color',
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
+</button>
+</p>
