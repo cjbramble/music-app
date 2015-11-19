@@ -1,9 +1,9 @@
 <h3>Artist: <%= @artist.name %></h3>
 <table>
-  <p id="songs">Songs</p>
-  <% @artist.songs.each do |song| %>
+  <p id="songs">Albums</p>
+  <% @artist.albums.each do |album| %>
     <tr>
-      <td><%= song.title %></td>
+      <td><%= album.title %></td>
     </tr>
   <% end %>
 </table>
