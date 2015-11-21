@@ -21,7 +21,7 @@
   <%= link_to 'Back', :back, class: 'artist-buttons-text-color' %>
 </button>
 <button id="delete-artist" type="button" class="btn btn-danger">
-  <%= link_to 'Delete', artist_path, class: 'artist-buttons-text-color',
+  <%= link_to 'Delete', artist_path(@artist), class: 'artist-buttons-text-color',
           method: :delete,
           data: { confirm: 'Are you sure?' } %>
 </button>
