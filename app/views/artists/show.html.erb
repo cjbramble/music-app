@@ -1,12 +1,4 @@
-<h3>Artist: <%= @artist.name %></h3>
-<p>
-<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Artist', new_artist_path %></button>
-</p>
-
-<h4>Albums:</h4>
-<p>
-<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Album', new_album_path %></button>
-</p>
+<h3><%= @artist.name %></h3>
 
 <table class="table table-striped">
   <% @artist.albums.each do |album| %>
