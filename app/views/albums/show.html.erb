@@ -3,9 +3,14 @@
 <h4><%= link_to @album.artist.name, artist_path(@album.artist) %></h4>
 
 <table class="table table-striped">
+  <th>Song</th>
+  <th>Album</th>
+  <th>Artist</th>
   <% @album.songs.each do |song| %>
     <tr>
       <td><%= link_to song.title, song_path(song) %></td>
+      <td><%= @album.title %></td>
+      <td><%= @album.artist.name %></td>
     </tr>
   <% end %>
 </table>
