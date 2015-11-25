@@ -4,7 +4,7 @@
 <table class="table table-striped">
   <% @songs.each do |song| %>
     <tr>
-      <td><%= link_to song.title, song_path(song) %></td>
+      <td>"<%= link_to song.title, song_path(song) %>"</td>
       <td id="push-right"><%= link_to 'Details', song_path(song) %></td>
       <td id="push-right"><%= link_to 'Delete', song_path(song), class: "delete-red-text",
               method: :delete,
