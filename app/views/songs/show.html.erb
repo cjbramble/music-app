@@ -1,10 +1,10 @@
+<h1>"<%= @song.title %>" Details</h1>
+
 <table id="table-top-margin" class="table table-striped">
-  <th>Song</th>
   <th>Album</th>
   <th>Artist</th>
   <tr>
-    <td><%= @song.title %></td>
-    <td><%= link_to @song.album.title, album_path(@song.album) %></td>
+    <td><i><%= link_to @song.album.title, album_path(@song.album) %></i></td>
     <td><%= link_to @song.album.artist.name, artist_path(@song.album.artist) %></td>
   </tr>
 </table>

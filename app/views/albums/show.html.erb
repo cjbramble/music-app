@@ -1,11 +1,11 @@
+<h1><i><%= @album.title %></i> Details</h1>
+
 <table id="table-top-margin" class="table table-striped">
-  <th>Song</th>
-  <th>Album</th>
+  <th>Songs</th>
   <th>Artist</th>
   <% @album.songs.each do |song| %>
     <tr>
-      <td><%= link_to song.title, song_path(song) %></td>
-      <td><%= @album.title %></td>
+      <td>"<%= link_to song.title, song_path(song) %>"</td>
       <td><%= link_to @album.artist.name, artist_path(@album.artist) %></td>
     </tr>
   <% end %>
