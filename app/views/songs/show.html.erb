@@ -1,17 +1,13 @@
-<h3>Song: <%= @song.title %></h3>
-<p>
-<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Song', new_song_path %></button>
-</p>
-
-<h4>Album: <%= link_to @song.album.title, album_path(@song.album) %></h4>
-<p>
-<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Album', new_album_path %></button>
-</p>
-
-<h4>Artist: <%= link_to @song.album.artist.name, artist_path(@song.album.artist) %></h4>
-<p>
-<button id="new-object-button" type="button" class="btn btn-default btn-xs"><%= link_to 'New Artist', new_artist_path %></button>
-</p>
+<table id="table-top-margin" class="table table-striped">
+  <th>Song</th>
+  <th>Album</th>
+  <th>Artist</th>
+  <tr>
+    <td><%= @song.title %></td>
+    <td><%= link_to @song.album.title, album_path(@song.album) %></td>
+    <td><%= link_to @song.album.artist.name, artist_path(@song.album.artist) %></td>
+  </tr>
+</table>
 
 <p>
 <button id="delete-artist" type="button" class="btn btn-default artist-back-button">
