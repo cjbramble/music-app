@@ -1,2 +1,2 @@
 Live Example:
-https://apple-cobbler-56117.herokuapp.com/artists
+https://apple-cobbler-56117.herokuapp.com
