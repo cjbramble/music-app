@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :authenticate_user!
 
   # List all songs
   #

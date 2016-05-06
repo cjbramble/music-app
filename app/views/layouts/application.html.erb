@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Music App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
 </head>
+
 <body>
   <div id="navbar-style" class="container-fluid gradient">
     <div class="container">
       <nav>
         <div class="col-md-4">
-          <a class="navbar-brand" href="/"><%= image_tag "musicapp.png" %></a>
+          <a class="navbar-brand" href="/">
+            <%= image_tag "musicapp.png" %>
+          </a>
         </div>
         <div class="col-md-8">
           <div class="btn-group pull-right" role="group" aria-label="...">
@@ -24,9 +28,16 @@
     </div>
   </div>
   <div class="container-fluid col-md-8 col-md-offset-2 space-below-text">
+    <p class="notice">
+      <%= notice %>
+    </p>
+    <p class="alert">
+      <%= alert %>
+    </p>
     <%= yield %>
   </div>
   <footer class="container-fluid col-lg-12">
   </footer>
 </body>
+
 </html>
