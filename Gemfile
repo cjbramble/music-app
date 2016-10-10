@@ -17,3 +17,10 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
 end
+
+# Authentication via oauth
+gem 'omniauth'
+gem 'omniauth-github'
+
+# Environment
+gem 'dotenv-rails'
