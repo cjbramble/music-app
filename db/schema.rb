@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151201013728) do
+ActiveRecord::Schema.define(version: 20161010182540) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20151201013728) do
     t.datetime "updated_at",             null: false
     t.integer  "album_id",   limit: 4
     t.integer  "artist_id",  limit: 4
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",         limit: 255
+    t.string   "provider",     limit: 255
+    t.string   "uid",          limit: 255
+    t.string   "nickname",     limit: 255
+    t.string   "access_token", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
