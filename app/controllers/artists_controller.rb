@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_filter :authenticate!, except: [:index]
+  before_filter :authenticate!, except: [:index, :show]
 
   # List all artists
   #
