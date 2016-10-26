@@ -1,2 +1,1 @@
-Live Example:
-https://apple-cobbler-56117.herokuapp.com
+To setup some test data, run `bundle exec rake db_tasks:rebuild`, from the root of the app.
